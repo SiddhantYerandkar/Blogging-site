@@ -7,7 +7,7 @@ const dotenv = require('dotenv')
 dotenv.config();
 
 const app = express()
-
+const PORT = process.env.PORT || 3001
 app.use(multer().any())
 app.use(express.json())
 app.use(cors())
@@ -20,8 +20,12 @@ mongoose.connect(uri, { useNewUrlParser: true })
 
 app.use('/', route)
 
+app.get('/',(req,res)=>{
+    res.send("hello")
+})
+
 app.use((req, res) => {
     res.status(404).send({ status: false, message: `Page Not Found , Given URL ${req.url} is incorrect for this application.` })
 })
 
-app.listen(3001, () => console.log("connected to Port 3001"))
+app.listen(PORT, () => console.log("connected to Port 3001"))

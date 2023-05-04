@@ -13,4 +13,5 @@ router.put('/editPost/:postId', auth.authenticate, blogController.editPost)
 router.delete('/deletePost/:postId', auth.authenticate, blogController.deletePost)
 router.get('/getPosts/:userId', auth.authenticate, blogController.getPostsById)
 router.get('/post/:postId', blogController.getPostsbyPostId)
+
 module.exports = router
