@@ -21,9 +21,6 @@ mongoose.connect(uri, { useNewUrlParser: true })
 
 app.use('/', route)
 
-app.get('/',(req,res)=>{
-    res.send("hello")
-})
 
 app.use((req, res) => {
     res.status(404).send({ status: false, message: `Page Not Found , Given URL ${req.url} is incorrect for this application.` })
