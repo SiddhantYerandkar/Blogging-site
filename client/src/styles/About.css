@@ -1,0 +1,12 @@
+.about-card {
+    background: #ffffff;
+    box-shadow: none;
+    cursor: default;
+    transform: none;
+}
+
+.about-card:hover {
+    transform: none;
+    background-color: none;
+    cursor: default
+}

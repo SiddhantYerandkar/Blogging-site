@@ -1,0 +1,5 @@
+.my-card:hover {
+    transform: none;
+    background-color: none;
+    cursor: default
+}
