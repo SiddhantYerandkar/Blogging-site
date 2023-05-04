@@ -17,8 +17,8 @@ mongoose.connect(uri, { useNewUrlParser: true })
     .then(() => console.log("MongoDb Connected"))
     .catch((error) => console.log(error))
 
-app.use(route)
-//app.use('/', route)
+
+app.use('/', route)
 
 app.use((req, res) => {
     res.status(404).send({ status: false, message: `Page Not Found , Given URL ${req.url} is incorrect for this application.` })
