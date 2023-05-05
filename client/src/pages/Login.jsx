@@ -21,7 +21,7 @@ const Login = () => {
     function login(e) {
         e.preventDefault()
 
-        axios.post('http://localhost:3001/login', credentials)
+        axios.post(`${process.env.BASE_URL}/login`, credentials)
             .then((response) => {
                 console.log(response)
                 alert("You have successfully LoggedIn")

@@ -10,7 +10,7 @@ const SinglePost = () => {
     const { postId } = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/post/${postId}`)
+        axios.get(`${process.env.BASE_URL}/post/${postId}`)
             .then((response) => {
                 console.log(response.data.data);
                 setPost(response.data.data)

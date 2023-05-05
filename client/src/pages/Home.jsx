@@ -8,7 +8,7 @@ const Home = () => {
     const [blogs, setBlogs] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/getPosts')
+        axios.get(`${process.env.BASE_URL}/getPosts`)
             .then((response) => {
                 console.log(response.data);
                 setBlogs(response.data.data)

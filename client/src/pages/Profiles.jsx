@@ -10,7 +10,7 @@ const Profiles = () => {
 
     useEffect(() => {
         const userId = localStorage.getItem('userId')
-        axios.get(`http://localhost:3001/getPosts/${userId}`, {
+        axios.get(`${process.env.BASE_URL}/getPosts/${userId}`, {
             headers: {
                 "x-api-key": localStorage.getItem('authToken')
             }
