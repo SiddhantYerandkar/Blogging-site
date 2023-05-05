@@ -21,7 +21,7 @@ const Login = () => {
     function login(e) {
         e.preventDefault()
 
-        axios.post(`${process.env.BASE_URL}/login`, credentials)
+        axios.post(`${process.env.REACT_APP_BASE_URL}/login`, credentials)
             .then((response) => {
                 console.log(response)
                 alert("You have successfully LoggedIn")

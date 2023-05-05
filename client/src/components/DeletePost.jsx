@@ -8,7 +8,7 @@ const DeletePost = ({ postId, onDelete }) => {
     const token = localStorage.getItem('authToken')
 
     function handleDelete() {
-        axios.delete(`${process.env.BASE_URL}/deletePost/${postId}`, {
+        axios.delete(`${process.env.REACT_APP_BASE_URL}/deletePost/${postId}`, {
             headers: {
                 "x-api-key": token
             }

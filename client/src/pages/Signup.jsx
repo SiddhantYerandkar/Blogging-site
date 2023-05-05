@@ -18,7 +18,7 @@ const Signup = () => {
 
     function handleSubmit(e) {
         e.preventDefault()
-        axios.post(`${process.env.BASE_URL}/register`, post)
+        axios.post(`${process.env.REACT_APP_BASE_URL}/register`, post)
             .then((response) => {
                 console.log(response)
                 alert(response.data.message)

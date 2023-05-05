@@ -34,7 +34,7 @@ const CreatePost = (props) => {
         formData.append('title', newBlog.title)
         formData.append('body', newBlog.body)
 
-        axios.post(`${process.env.BASE_URL}/createPost`, formData, {
+        axios.post(`${process.env.REACT_APP_BASE_URL}/createPost`, formData, {
             headers: {
                 "x-api-key": token
             }

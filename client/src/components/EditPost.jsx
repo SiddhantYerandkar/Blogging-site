@@ -21,7 +21,7 @@ const EditPost = (props) => {
     const { postId } = useParams()
 
     useEffect(() => {
-        axios.get(`${process.env.BASE_URL}/post/${postId}`)
+        axios.get(`${process.env.REACT_APP_BASE_URL}/post/${postId}`)
             .then((response) => {
                 console.log(response.data.data)
                 setNewBlog({ title: response.data.data.title, body: response.data.data.body })
@@ -46,7 +46,7 @@ const EditPost = (props) => {
         formData.append('title', newBlog.title)
         formData.append('body', newBlog.body)
 
-        axios.put(`${process.env.BASE_URL}/editPost/${postId}`, formData, {
+        axios.put(`${process.env.REACT_APP_BASE_URL}/editPost/${postId}`, formData, {
             headers: {
                 "x-api-key": token
             }
