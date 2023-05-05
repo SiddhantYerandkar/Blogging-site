@@ -26,4 +26,4 @@ app.use((req, res) => {
     res.status(404).send({ status: false, message: `Page Not Found , Given URL ${req.url} is incorrect for this application.` })
 })
 
-app.listen(PORT, () => console.log("connected to Port 3001"))
+app.listen(PORT, () => console.log(`connected to ${PORT}`))
