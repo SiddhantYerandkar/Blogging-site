@@ -1,6 +1,6 @@
 const blogModel = require('../models/blogModel')
 const userModel = require('../models/userModel')
-const AWS = require('../controller/aws')
+const cloudinary = require('../controller/cloudinary')
 
 const createBlog = async function (req, res) {
     try {
@@ -25,7 +25,7 @@ const createBlog = async function (req, res) {
             if (image[0].mimetype.split('/')[0] != 'image') {
                 return res.status(400).send({ status: false, message: "Provide a jpeg or png file" })
             }
-            let imageLink = await AWS.uploadFile(image[0])
+            let imageLink = await cloudinary.uploadFile(image[0])
             data.image = imageLink
         }
 
